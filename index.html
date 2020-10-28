@@ -113,16 +113,12 @@
                         </div>
                         <div class="form-element">
                             <label for="applicant-phone-nb">Téléphone : </label>
-                            <input type="text" name="applicant-phone-nb" id="applicant-phone-nb" pattern="[a-zA-Z0-9]"
-                                required />
+                            <input type="text" name="applicant-phone-nb" id="applicant-phone-nb"
+                                placeholder="0123456789" pattern="[a-zA-Z0-9]" required />
                         </div>
                     </div>
 
                     <div class="column">
-                        <div class="form-element">
-                            <label for="applicant-adherent-nb">N° adhérent : </label>
-                            <input type="text" name="applicant-adherent-nb" id="applicant-adherent-nb" required />
-                        </div>
                         <div class="form-element">
                             <label for="email">Adresse mail: </label>
                             <input type="email" name="email" id="email" required placeholder="adresse@mail.fr" />
@@ -130,6 +126,10 @@
                         <div class="form-element">
                             <label for="applicant-fax-nb">Fax (optionnel) :</label>
                             <input type="text" name="applicant-fax-nb" id="applicant-fax-nb" />
+                        </div>
+                        <div class="form-element">
+                            <label for="applicant-adherent-nb">N° adhérent : </label>
+                            <input type="text" name="applicant-adherent-nb" id="applicant-adherent-nb" required />
                         </div>
                     </div>
                 </fieldset>
@@ -143,29 +143,27 @@
                         </div>
                     </div>
                     <div class="column">
-
-
                         <div class="form-element">
                             <label for="birth-name">Nom de naissance : </label>
                             <input type="text" name="birth-name" id="birth-name" required />
                         </div>
                         <div class="form-element">
-                            <label for="wedding-name">Nom marital : </label>
-                            <input type="text" name="wedding-name" id="wedding-name" required />
+                            <label for="wedding-name">Nom marital (Salariés mariés uniquement) : </label>
+                            <input type="text" name="wedding-name" id="wedding-name" />
                         </div>
-                        <div class="form-element">
-                            <label for="working-post">Poste de travail : </label>
-                            <input type="text" name="working-post" id="working-post" required />
-                        </div>
-                    </div>
-                    <div class="column">
                         <div class="form-element">
                             <label for="Fname">Prénom : </label>
                             <input type="text" name="Fname" id="Fname" required />
                         </div>
+                    </div>
+                    <div class="column">
                         <div class="form-element">
                             <label for="birthdate">Date de naissance </label>
                             <input type="date" name="birthdate" id="birthdate" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="working-post">Poste de travail : </label>
+                            <input type="text" name="working-post" id="working-post" required />
                         </div>
                         <div class="form-element">
                             <label for="pcs-code">Code PCS : </label>
@@ -189,6 +187,12 @@
                                 <label for="temporary-contract-end-date">Pour les CDD, date de fin de contrat : </label>
                                 <input type="date" name="temporary-contract-end-date" id="temporary-contract-end-date"
                                     required />
+                            </div>
+                            <div class="form-element">
+                                <label>Le salarié a occupé un emploi identique présentant les mêmes
+                                    risques d’exposition pour votre entreprise ou pour une autre entreprise : </label>
+                                <label for="risks"><input name="risks" type="radio" />Oui</label>
+                                <label for="risks"><input name="risks" type="radio" />non</label>
                             </div>
                         </div>
                         <div id="simple-individual-monitoring" class="form-element form-title">
@@ -258,7 +262,7 @@
                             <label for="rim-answer10"><input name="rim-answer" id="rim-answer10"
                                     type="checkbox" />Manutention manuelle,
                                 port de
-                                charge ˃55kg (R4541-9)</label>
+                                charge ˃ 55kg (R4541-9)</label>
                         </div>
                         <div id="yearly-reinforced-individual-monitoring" class="form-element form-title">
                             <h3>Suivi Individuel Renforcé Annuel (SIRA) :</h3>
@@ -294,7 +298,6 @@
                                     id="employer-request" />Examen à la demande
                                 de l’employeur</label>
                         </div>
-
                         <div id="divider">
                             <hr>
                         </div>
@@ -316,10 +319,10 @@
                                 <input type="date" name="stop-date" id="stop-date" required />
                             </div>
                         </div>
-
                         <div class="form-element" id="employer-apt-request">
                             <label for="employer-reason">Motif</label>
-                            <textarea name="employer-reason" id="employer-reason"></textarea>
+                            <textarea name="employer-reason" id="employer-reason" maxlength="280"
+                                placeholder="Motif.."></textarea>
                         </div>
                     </div>
                 </fieldset>
