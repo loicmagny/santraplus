@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Teko:wght@300&display=swap"
+            rel="stylesheet">
+        <title>Santraplus</title>
+    </head>
+
+
+    <body>
+        <!-- header and navbar -->
+        <header>
+            <nav class="navbar">
+                <div class="top-navbar">
+                    <a href="https://www.santraplus.fr/"><img src="assets/img/logo_santraplus.png"
+                            alt="Logo Santraplus"></a>
+                    <h1>Service de Santé au Travail Interentreprises</h1>
+                    <input type="search" name="search" placeholder="Recherche" class="search" /><button type="submit"
+                        class="search-submit"><span class="material-icons">
+                            search
+                        </span></button>
+                </div>
+                <!-- nav bar links -->
+                <ul id="scrolling">
+                    <!-- icon used as a button to simulate connection -->
+                    <a href="#"><span class="material-icons" id="profile-icon">
+                            perm_identity
+                        </span>
+                    </a>
+                    <li><a href="#">Qui sommes-nous?<span class="material-icons">
+                                expand_more
+                            </span></a>
+                        <ul>
+                            <li><a href="https://www.santraplus.fr/qui-sommes-nous/presentation-generale/">Présentation
+                                    générale</a></li>
+                            <li><a href="santraplus.fr/qui-sommes-nous/les-instances/">Les instances</a></li>
+                            <li><a href="https://www.santraplus.fr/qui-sommes-nous/notre-organisation/">Notre
+                                    organisation</a></li>
+                            <li><a href="https://www.santraplus.fr/qui-sommes-nous/nos-sites/">Nos sites</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nos prestations<span class="material-icons">
+                                expand_more
+                            </span></a>
+                        <ul>
+                            <li><a href="https://www.santraplus.fr/nos-prestations/missions-generales/">Missions
+                                    générale</a></li>
+                            <li><a href="https://www.santraplus.fr/nos-prestations/actions-en-milieu-de-travail/">Actions
+                                    en
+                                    milieu de travail</a></li>
+                            <li><a href="https://www.santraplus.fr/nos-prestations/suivi-individuel/">Suivi
+                                    individuel</a>
+                            </li>
+                            <li><a href="https://www.santraplus.fr/nos-prestations/nos-priorites-d-actions/">Nos
+                                    priorités
+                                    d'actions</a></li>
+                        </ul>
+                    </li>
+                    <a href="https://www.santraplus.fr/espace-prevention/ateliers-de-sensibilisation/">Ateliers de
+                        sensibilisation</a>
+                    <a href="https://www.santraplus.fr/formations-e-learning/">Formations E-learning</a>
+                    <li><a href="">Espace documentaire<span class="material-icons">
+                                expand_more
+                            </span></a>
+                        <ul>
+                            <li><a href="https://www.santraplus.fr/espace-documentaire2/nos-newsletters/">Nos
+                                    newsletters</a></li>
+                            <li><a href="https://www.santraplus.fr/espace-documentaire2/documents-de-prevention/">Document
+                                    de prévention</a></li>
+                            <li><a href="https://www.santraplus.fr/espace-documentaire2/liens-partenaires/">Liens /
+                                    partenaires</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- main part -->
+        <section>
+            <!-- entire form -->
+            <form action="#" class="complete-form" method="POST">
+                <!--part where you wether you want an appointment or push back/cancel your appointment -->
+                <div id="top-form">
+                    <h3>Désirez-vous: </h3>
+
+                    <div class="form-element-row">
+                        <label for="get-apt"><input name="managing-apt" type="radio" id="get-apt" />Prendre
+                            rendez-vous</label>
+                        <label for="push-apt"><input name="managing-apt" type="radio" id="push-apt" />Reporter/annuler
+                            rendez-vous</label>
+                    </div>
+                </div>
+                <!-- part of the form focused on company informations, hidden by jQuery -->
+                <fieldset class="form" id="references">
+                    <div class="column">
+                        <h3 class="title">Vos références</h3>
+                    </div>
+                    <div class="column">
+
+                        <div class="form-element">
+                            <label for="social-reason">Raison sociale : </label>
+                            <input type="text" name="social-reason" id="social-reason" pattern="[a-zA-Z0-9]" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="applicant-name">Nom du demandeur : </label>
+                            <input type="text" name="applicant-name" id="applicant-name" pattern="[a-zA-Z0-9]"
+                                required />
+                        </div>
+                        <div class="form-element">
+                            <label for="applicant-phone-nb">Téléphone : </label>
+                            <input type="text" name="applicant-phone-nb" id="applicant-phone-nb" pattern="[a-zA-Z0-9]"
+                                required />
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="form-element">
+                            <label for="applicant-adherent-nb">N° adhérent : </label>
+                            <input type="text" name="applicant-adherent-nb" id="applicant-adherent-nb" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="email">Adresse mail: </label>
+                            <input type="email" name="email" id="email" required placeholder="adresse@mail.fr" />
+                        </div>
+                        <div class="form-element">
+                            <label for="applicant-fax-nb">Fax (optionnel) :</label>
+                            <input type="text" name="applicant-fax-nb" id="applicant-fax-nb" />
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- part of the form for salary infos, hidden by jQuery -->
+                <fieldset class="form" id="employee">
+                    <div class="column">
+                        <h3 class="title">Le salarié</h3>
+                        <div class="form-element">
+                            <label><input name="civility" type="radio" />Monsieur</label>
+                            <label><input name="civility" type="radio" />Madame</label>
+                        </div>
+                    </div>
+                    <div class="column">
+
+
+                        <div class="form-element">
+                            <label for="birth-name">Nom de naissance : </label>
+                            <input type="text" name="birth-name" id="birth-name" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="wedding-name">Nom marital : </label>
+                            <input type="text" name="wedding-name" id="wedding-name" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="working-post">Poste de travail : </label>
+                            <input type="text" name="working-post" id="working-post" required />
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-element">
+                            <label for="Fname">Prénom : </label>
+                            <input type="text" name="Fname" id="Fname" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="birthdate">Date de naissance </label>
+                            <input type="date" name="birthdate" id="birthdate" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="pcs-code">Code PCS : </label>
+                            <input type="text" name="pcs-code" id="pcs-code" required />
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- additional information on the work performed by the employee, hidden by jQuery  -->
+                <fieldset class="form" id="complementary-infos">
+                    <div class="column">
+                        <h3 class="title">Informations complémentaires pour création d'un nouveau salarié</h3>
+                        <div class="form-element">
+                            <label for="hiring-date">Date d'embauche :</label>
+                            <input type="date" name="hiring-date" id="hiring-date" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="contract-type">Type de contrat </label>
+                            <input type="text" name="contract-type" id="contract-type" required
+                                placeholder="CDD, CDI, apprenti..." pattern="[a-zA-Z0-9]" />
+                            <div class=" form-element">
+                                <label for="temporary-contract-end-date">Pour les CDD, date de fin de contrat : </label>
+                                <input type="date" name="temporary-contract-end-date" id="temporary-contract-end-date"
+                                    required />
+                            </div>
+                        </div>
+                        <div id="simple-individual-monitoring" class="form-element form-title">
+                            <h3>Suivi Individuel Simple(SI)</h3>
+                            <label for="sim-answer1"><input name="sim-answer" id="sim-answer1" type="checkbox" />Cas
+                                général hors risque
+                                particulier</label>
+                            <label for="sim-answer2"><input name="sim-answer" id="sim-answer2" type="checkbox" />Moins
+                                de 18 ans non
+                                affecté à
+                                travaux réglementés.</label>
+                            <label for="sim-answer3"><input name="sim-answer" id="sim-answer3" type="checkbox" />Salarié
+                                exposé aux agents
+                                biologiques groupe 2 (AB2)</label>
+                            <label for="sim-answer4"><input name="sim-answer" id="sim-answer4" type="checkbox" />Salarié
+                                exposé aux champs
+                                électromagnétiques si VLE dépassée.</label>
+                        </div>
+                        <div id="adapted-individual-monitoring" class="form-element form-title">
+                            <h3>Suivi Individuel Adapté (SIA)</h3>
+                            <label for="sia-answer1"><input name="sia-answer1" id="sia-answer1"
+                                    type="checkbox" />Travailleur de
+                                nuit</label>
+                            <label for="sia-answer2"><input name="sia-answer2" id="sia-answer2"
+                                    type="checkbox" />Travailleur
+                                handicapé</label>
+                            <label for="sia-answer3"><input name="sia-answer3" id="sia-answer3"
+                                    type="checkbox" />Travailleur titulaire
+                                d’une
+                                pension d’invalidité</label>
+                            <label for="sia-answer4"><input name="sia-answer4" id="sia-answer4" type="checkbox" />Femme
+                                enceinte,
+                                allaitante ou
+                                venant d’accoucher</label>
+                        </div>
+                        <div id="reinforced-individual-monitoring" class="form-element form-title">
+                            <h3>Suivi Individuel Renforcé (SIR) :</h3>
+                            <label for="rim-answer1"><input name="rim-answer" id="rim-answer1" type="checkbox" />Salarié
+                                exposé à
+                                l’amiante</label>
+                            <label for="rim-answer2"><input name="rim-answer" id="rim-answer2" type="checkbox" />Salarié
+                                exposé aux agents
+                                biologiques gp 3 et 4 (ABP3 et 4)</label>
+                            <label for="rim-answer3"><input name="rim-answer" id="rim-answer3" type="checkbox" />Salarié
+                                exposé aux
+                                rayonnements
+                                ionisants Cat B</label>
+                            <label for="rim-answer4"><input name="rim-answer" id="rim-answer4"
+                                    type="checkbox" />Autorisation de
+                                conduite</label>
+                            <label for="rim-answer5"><input name="rim-answer" id="rim-answer5"
+                                    type="checkbox" />Habilitation électrique
+                                (travaux
+                                sur installations électriques)</label>
+                            <label for="rim-answer6"><input name="rim-answer" id="rim-answer6" type="checkbox" />Salarié
+                                exposé à
+                                CMR</label>
+                            <label for="rim-answer7"><input name="rim-answer" id="rim-answer7" type="checkbox" />Salarié
+                                exposé au
+                                plomb</label>
+                            <label for="rim-answer8"><input name="rim-answer" id="rim-answer8" type="checkbox" />Salarié
+                                exposé au risque
+                                Hyperbare</label>
+                            <label for="rim-answer9"><input name="rim-answer" id="rim-answer9" type="checkbox" />Salarié
+                                exposé au risque
+                                de chute de hauteur lors du montage et démontage d’échafaudage</label>
+                            <label for="rim-answer10"><input name="rim-answer" id="rim-answer10"
+                                    type="checkbox" />Manutention manuelle,
+                                port de
+                                charge ˃55kg (R4541-9)</label>
+                        </div>
+                        <div id="yearly-reinforced-individual-monitoring" class="form-element form-title">
+                            <h3>Suivi Individuel Renforcé Annuel (SIRA) :</h3>
+                            <label for="sira-answer1"><input name="sira-answer" id="sira-answer1"
+                                    type="checkbox" />Rayonnements
+                                ionisants
+                                Cat
+                                A</label>
+                            <label for="sira-answer2"><input name="sira-answer" id="sira-answer2"
+                                    type="checkbox" />Moins
+                                de 18 ans
+                                affecté à
+                                travaux
+                                réglementés</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Inputs to determine the appointment, hidden by jQuery -->
+                <fieldset class="form" id="apt-request">
+                    <div class="column">
+                        <h3 class="title">Demande de rendez-vous</h3>
+                        <div class="form-element">
+                            <label for="motherhood"><input name="apt-reason" type="radio" id="motherhood" />Reprise
+                                après un congé de
+                                maternité</label>
+                            <label for="pro-sickness"><input name="apt-reason" type="radio" id="pro-sickness" />Reprise
+                                après une
+                                absence pour cause de maladie professionnelle</label>
+                            <label for="30d-absence"><input name="apt-reason" type="radio" id="30d-absence" />Reprise
+                                après une
+                                absence de + 30 jours</label>
+                            <label for="employer-request"><input name="apt-reason" type="radio"
+                                    id="employer-request" />Examen à la demande
+                                de l’employeur</label>
+                        </div>
+
+                        <div id="divider">
+                            <hr>
+                        </div>
+                        <div class="form-element" id="absence-reason">
+                            <label for="absence-reason-accident"><input name="absence-reason"
+                                    id="absence-reason-accident" type="radio" />Accident de
+                                travail</label>
+                            <label for="absence-reason-sickness"><input name="absence-reason"
+                                    id="absence-reason-sickness" type="radio" />Arrêt
+                                maladie</label>
+                        </div>
+                        <div id="dates">
+                            <div class="form-element">
+                                <label for="recovery-date">Date de la reprise </label>
+                                <input type="date" name="recovery-date" id="recovery-date" required />
+                            </div>
+                            <div class="form-element">
+                                <label for="stop-date">Date de l'arrêt </label>
+                                <input type="date" name="stop-date" id="stop-date" required />
+                            </div>
+                        </div>
+
+                        <div class="form-element" id="employer-apt-request">
+                            <label for="employer-reason">Motif</label>
+                            <textarea name="employer-reason" id="employer-reason"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Inputs to push back the appointments, hidden by jQuery -->
+                <fieldset class="form" id="push-back-apt">
+                    <div class="column">
+                        <h3 class="title">Annuler ou reporter un rendez-vous: </h3>
+                        <div class="form-element">
+                            <label for="apt-date"><strong>Date</strong> du rendez-vous </label>
+                            <input type="date" name="apt-date" id="apt-date" required />
+                        </div>
+                        <div class="form-element">
+                            <label for="apt-time"><strong>Horaire</strong> du rendez-vous: </label>
+                            <input type="time" name="apt-time" id="apt-time" required />
+                        </div>
+                        <div class="form-element">
+                            <select name="doc" id="doc-select">
+                                <option value="doc">Médecin ou infirmière</option>
+                                <option value="Dupont">Dupont, médecin</option>
+                                <option value="Dubois">Dubois, médecin</option>
+                                <option value="Durant">Durant, infirmière</option>
+                                <option value="Dumoulin">Dumoulin, infirmière</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h4 class="title">Reporter le rendez-vous</h4>
+                        <div class="form-element">
+                            <label for="push-back"><input name="push-back" id="push-back"
+                                    type="radio" />Reporter</label>
+                            <label for="cancel-apt"><input name="push-back" type="radio"
+                                    id="cancel-apt" />Annuler</label>
+                            <div id="divider2">
+                                <hr>
+                            </div>
+                            <div class="column">
+                                <div class="form-element" id="cancel-apt-reason">
+                                    <label for="reason">Motif(s): </label>
+                                    <input type="text" name="reason" id="reason" required />
+                                </div>
+                                <div class="form-element" id="push-back-apt-availability">
+                                    <label for="availability">Disponibilité: </label>
+                                    <input type="date" name="availability" id="availability" />
+                                    <label for="new-apt-time">Horaire du rendez-vous: </label>
+                                    <input type="time" name="new-apt-time" id="new-apt-time" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Message for when a user tries to access the push-back/cancel part without being logged in, hidden by jQuery -->
+                <fieldset class="form" id="error-message">
+                    <div class="form-element-error">
+                        <h4 class="warning-form">Vous devez être connecté pour modifier votre rendez-vous</h4>
+                        <div class="column btn" id="connect-btn">
+                            <button value="Se connecter">Se connecter</button>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- Red title and validate button to send the form -->
+                <div id="bottom-form">
+                    <div class="main-title">
+                        <h2>Attention ! Toute demande incomplète ne sera pas prise en compte</h2>
+                    </div>
+                    <div class="column btn" id="submit-btn">
+                        <button type="submit" value="Valider">Valider</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- footer with footer links -->
+        <footer>
+            <div class="footer-links">
+                <a href="https://www.santraplus.fr/nous-recrutons/">Nous recrutons</a>
+                <p>♦</p>
+                <a href="https://www.santraplus.fr/actualites-sante-au-travail-le-havre/">Actualité</a>
+                <p>♦</p>
+                <a href="https://www.santraplus.fr/nous-contacter/">Nous contacter</a>
+                <p>♦</p>
+                <a href="https://www.santraplus.fr/politique-de-confidentialite/">Politique de confidentialité</a>
+                <p>♦</p>
+                <a href="https://www.santraplus.fr/plan-du-site/">Plan du site</a>
+            </div>
+        </footer>
+    </body>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/display.js"></script>
+
+</html>

@@ -1,0 +1,401 @@
+/* rules for display of the main elements */
+
+section,
+header,
+footer,
+.complete-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* setting the background */
+body {
+    background: url("../img/bg_site.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/* placing the footer */
+footer {
+    margin: 0 auto;
+    bottom: 0;
+    margin-top: 19.5%;
+}
+
+/* adding a shadow to the navbar */
+nav {
+    box-shadow: black 2px;
+
+}
+
+/* top of the navbar, the logo, search input and title */
+.top-navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: white;
+}
+
+/* top of navbar title */
+.top-navbar>h1 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 130px;
+    color: #0092b6;
+    font-family: Georgia, "Times New Roman", Serif;
+    font-size: 20px;
+    line-height: 130px;
+}
+
+/* search input in navbar */
+.search {
+    height: 40px;
+    background: #f2f2f2;
+    border: none;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075) inset;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.075) inset;
+    color: #b2b2b2;
+}
+
+/* btn for the input */
+.search-submit {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-collapse: separate;
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    user-select: none;
+    position: relative;
+    height: 40px;
+    background-color: #c0bda4;
+    border-color: transparent;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* list of links in the navbar, rules to make to dropdown effect */
+#scrolling,
+#scrolling ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 40px;
+
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+
+}
+
+/* centering menu  */
+#scrolling {
+
+    text-align: center;
+    background-color: #C0BDA4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#scrolling li {
+    /* horizontally placing the links */
+    display: inline-block;
+}
+
+
+#scrolling ul li {
+    /* removing the comportement for the submenu links */
+    display: inherit;
+    text-transform: uppercase;
+}
+
+/* style for the anchor */
+#scrolling a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    align-items: center;
+    color: white;
+
+}
+
+/* hide submenu on the left */
+#scrolling ul {
+    position: absolute;
+    /* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+
+/* placing submenu when hovering li */
+#scrolling li:hover ul {
+    /* Au survol des li du menu on replace les sous menus */
+    left: auto;
+}
+
+/* vertically aligning the arrow_down span  */
+#scrolling>li:nth-child(1)>a>span,
+#scrolling>li:nth-child(2)>a>span,
+#scrolling>li:nth-child(5)>a>span {
+    vertical-align: middle;
+}
+
+/* style for the links */
+#scrolling>li>ul>li>a {
+    background-color: #C0BDA4;
+    padding: 1%;
+    font-size: 14px;
+    max-width: 75%;
+
+}
+
+/* style for the links on hover */
+#scrolling>li:nth-child(1)>a:hover,
+#scrolling>li:nth-child(2)>a:hover,
+#scrolling>li:nth-child(3)>a:hover,
+#scrolling>a:nth-child(4):hover,
+#scrolling>a:nth-child(5):hover,
+#scrolling>li:nth-child(6)>a:hover {
+    background-color: #8C8A77;
+    transition: ease-in 0.5s;
+    -webkit-transition: ease-in 0.5s;
+    -moz-transition: ease-in 0.5s;
+    -ms-transition: ease-in 0.5s;
+    -o-transition: ease-in 0.5s;
+    height: fit-content;
+    vertical-align: middle;
+}
+
+/* style for the profile icon */
+#profile-icon {
+    vertical-align: middle;
+    margin: 1%;
+}
+
+/* style for the profile icon on hover */
+#profile-icon:hover {
+    background-color: #8C8A77;
+    transition: ease-in 0.5s;
+    -webkit-transition: ease-in 0.5s;
+    -moz-transition: ease-in 0.5s;
+    -ms-transition: ease-in 0.5s;
+    -o-transition: ease-in 0.5s;
+}
+
+/* adding a margin to every element of the section */
+section {
+    margin: 2%;
+
+}
+
+/* style for the fieldset around the form parts */
+fieldset {
+    -webkit-box-shadow: 4px 0px 14px 3px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 4px 0px 14px 3px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 0px 14px 3px rgba(0, 0, 0, 0.35);
+    padding: 5%;
+}
+
+/* style for the form parts */
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 823px;
+    height: 100%;
+    font-size: 12px;
+    background-color: white;
+}
+
+/* style for the form title */
+.form-title>h3 {
+    text-decoration: underline;
+    width: fit-content;
+}
+
+/* setting label above input */
+.form-element {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1%;
+}
+
+/* style for the error message when not connected */
+.form-element-error {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+/* style to place elements in a row */
+.form-element-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 2%;
+    width: 200%;
+}
+
+/* style to place elements in the form in a column*/
+.column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 60%;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+/* style for the radios to choose wether you want an appointment or to push back your appointment */
+#top-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    padding: 1%;
+}
+
+/* style for the error message when not connected,and for the button used to simulate connection */
+#error-message,
+#connect-btn>a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-decoration: none;
+}
+/* style div containing the button to submit the form */
+#submit-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 18%;
+}
+/* style of the submit button and the connect button */
+#submit-btn>button,
+#connect-btn>button {
+    text-align: center;
+    text-decoration: none;
+    /* create a small space when buttons wrap on 2 lines */
+    margin: 2px 0;
+
+    /* invisible border (will be colored on hover/focus) */
+    border: solid 1px transparent;
+    border-radius: 4px;
+
+    /* size comes from text & padding (no width/height) */
+    padding: 0.5em 1em;
+
+    /* make sure colors have enough contrast! */
+    color: #ffffff;
+    background-color: #009FBC;
+
+}
+/* removing underline on the link of the connection button in push-apt div when you're not connected */
+#connect-btn>a>button {
+    text-decoration: none;
+}
+/* style of the submit button and the connect button on hover */
+#submit-btn>button:hover,
+#connect-btn>button:hover {
+
+    background-color: #BECC3D;
+    color: white;
+    border-color: currentColor;
+    transition: ease-in 0.5s;
+    -webkit-transition: ease-in 0.5s;
+    -moz-transition: ease-in 0.5s;
+    -ms-transition: ease-in 0.5s;
+    -o-transition: ease-in 0.5s;
+}
+
+/* style for the footer, including bg-image */
+.footer-links {
+    background: url("../img/bg_footer.png") center no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #AEC000;
+    width: 823px;
+    bottom: 0;
+    position: relative;
+    flex-shrink: 0;
+    bottom: -2rem;
+}
+/* style for the links inside the footer */
+.footer-links>a {
+    text-decoration: none;
+    color: white;
+    margin: 2.5%;
+    width: 20%;
+}
+/* style for the links inside the footer on hover */
+.footer-links>a:hover {
+    text-decoration: underline dotted #AEC000;
+}
+/* style for every class title except h4 titles */
+.title:not(h4) {
+    background-color: #BECC3D;
+    box-shadow: -1px 5px 10px -3px rgba(0, 0, 0, 0.75);
+    padding: 2%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-left: -42.80%;
+    width: 140%;
+    font-size: 25px;
+}
+/* style for each h4 titles */
+body>section>form>fieldset:nth-child(5)>div:nth-child(2)>h4,
+#simple-individual-monitoring>h3,
+#adapted-individual-monitoring>h3,
+#reinforced-individual-monitoring>h3,
+#yearly-reinforced-individual-monitoring>h3 {
+    color: #009FBC;
+}
+/* style for the main warning  */
+.main-title {
+    color: red;
+    text-decoration: underline;
+}
