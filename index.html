@@ -114,7 +114,7 @@
                         <div class="form-element">
                             <label for="applicant-phone-nb">Téléphone : </label>
                             <input type="text" name="applicant-phone-nb" id="applicant-phone-nb"
-                                placeholder="0123456789" pattern="[a-zA-Z0-9]" required />
+                                placeholder="0123456789" pattern="[0-9]" required />
                         </div>
                     </div>
 
@@ -184,9 +184,10 @@
                             <input type="text" name="contract-type" id="contract-type" required
                                 placeholder="CDD, CDI, apprenti..." pattern="[a-zA-Z0-9]" />
                             <div class=" form-element">
-                                <label for="temporary-contract-end-date">Pour les CDD, date de fin de contrat : </label>
-                                <input type="date" name="temporary-contract-end-date" id="temporary-contract-end-date"
-                                    required />
+                                <label for="temporary-contract-end-date">Date de fin de contrat (CDD uniquement):
+                                </label>
+                                <input type="date" name="temporary-contract-end-date"
+                                    id="temporary-contract-end-date" />
                             </div>
                             <div class="form-element">
                                 <label>Le salarié a occupé un emploi identique présentant les mêmes
@@ -365,9 +366,9 @@
                                 </div>
                                 <div class="form-element" id="push-back-apt-availability">
                                     <label for="availability">Disponibilité: </label>
-                                    <input type="date" name="availability" id="availability" />
+                                    <input type="date" name="availability" id="availability" required />
                                     <label for="new-apt-time">Horaire du rendez-vous: </label>
-                                    <input type="time" name="new-apt-time" id="new-apt-time" />
+                                    <input type="time" name="new-apt-time" id="new-apt-time" required />
                                 </div>
                             </div>
                         </div>
@@ -378,7 +379,7 @@
                     <div class="form-element-error">
                         <h4 class="warning-form">Vous devez être connecté pour modifier votre rendez-vous</h4>
                         <div class="column btn" id="connect-btn">
-                            <button value="Se connecter">Se connecter</button>
+                            <button type="button">Se connecter</button>
                         </div>
                     </div>
                 </fieldset>

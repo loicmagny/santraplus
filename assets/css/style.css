@@ -8,7 +8,6 @@ footer,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 100%;
     margin: 0 auto;
 }
@@ -18,9 +17,6 @@ body {
     background: url("../img/bg_site.jpg") center no-repeat;
     background-size: cover;
 }
-
-
-
 
 /* adding a shadow to the navbar */
 nav {
@@ -126,14 +122,15 @@ nav {
     font-size: 14px;
 }
 
+/* horizontally placing the links */
 #scrolling li {
-    /* horizontally placing the links */
+
     display: inline-block;
 }
 
-
+/* removing the comportement for the submenu links */
 #scrolling ul li {
-    /* removing the comportement for the submenu links */
+
     display: inherit;
     text-transform: uppercase;
 }
@@ -152,15 +149,13 @@ nav {
 /* hide submenu on the left */
 #scrolling ul {
     position: absolute;
-    /* on cache les sous menus complètement sur la gauche */
     left: -999em;
     text-align: left;
     z-index: 1000;
 }
 
-/* placing submenu when hovering li */
+/* placing submenu when hovering li elements */
 #scrolling li:hover ul {
-    /* Au survol des li du menu on replace les sous menus */
     left: auto;
 }
 
@@ -216,7 +211,6 @@ nav {
 /* adding a margin to every element of the section */
 section {
     margin: 2%;
-
 }
 
 /* style for the fieldset around the form parts */
@@ -230,7 +224,6 @@ fieldset {
 /* style for the main warning  */
 .main-title {
     color: red;
-    text-decoration: underline;
 }
 
 /* style for the radios to choose wether you want an appointment or to push back your appointment */
@@ -239,7 +232,8 @@ fieldset {
     flex-direction: column;
     align-content: center;
     align-items: center;
-
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
     padding: 1%;
 }
 

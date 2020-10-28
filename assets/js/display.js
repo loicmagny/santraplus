@@ -68,7 +68,6 @@ $('#cancel-apt').click(function () {
 // function to display the part of the form to take an appointment, set the connect var to 0 if she is equal to 1
 
 $('#get-apt').click(function () {
-    connect = 0;
     $('#references').show();
     $('#employee').show();
     $('#complementary-infos').show();
